@@ -3,10 +3,11 @@
         xmlns:gap = "http://phonegap.com/ns/1.0"
         id        = "com.app.sintesis"
         version   = "0.0.1">
-    <name>Síntesis_min5</name>
+    <name>Síntesis_min6
+	</name>
 
     <description>
-        Síntesis_min5
+        Síntesis_min6
     </description>
 
     <author href="http://sintesis.mx" email="admin-web@sintesisdigital.com.mx">
