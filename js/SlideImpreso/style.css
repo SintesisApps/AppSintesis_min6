@@ -9,7 +9,7 @@
 
  
 .ImpresoSuplemento{
-	margin-top:150px;
+	margin-top:50px;
 }
 
 
@@ -129,7 +129,7 @@
 .ContenedorImagenImpreso .ContenedorImagen .ImagenMasImpreso{ vertical-align:top;overflow:hidden;display:inline-block;}
 .ContenedorImagenImpreso .ContenedorImagen .ImagenMasImpreso img{ width:200px; padding:0 0 0 10px;}
 
- @media screen and (min-width: 0px) and (max-width: 1024px) {
+/* @media screen and (min-width: 0px) and (max-width: 1024px) {
 .main {
 	width: 1024px;
 	height:670px;
@@ -159,7 +159,7 @@
 	background-size:260px;}
 	
  }
- 
+*/ 
    @media screen and (min-width: 0px) and (max-width:320px) {
 .main {
 	width: 320px;
@@ -177,7 +177,7 @@
 	margin-top:70px;}
 
 .swiper-slide{
-	background-size:150px;
+	background-size:auto;
 /*	background-size:150px;
 */	}
 	
@@ -201,7 +201,8 @@
 	margin-top:70px;}
 
 .swiper-slide{
-	background-size:150px;}
+	background-size:auto;
+	}
 	
 	
  }
