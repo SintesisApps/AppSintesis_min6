@@ -335,7 +335,7 @@
 		var ref = window.open('http://www.sintesis.mx', '_blank', 'location=yes');
 		}
 	function pagDesarrollo(){
-		var ref = window.open('http://www.sintesis.mx', '_blank', 'location=yes');
+		var ref = window.open('http://www.sintesis.mx/', '_blank', 'location=yes');
 		}
 	function PagTwitter(){
 		var ref = window.open('https://twitter.com/Sintesisweb', '_blank', 'location=yes');
@@ -576,7 +576,6 @@
 
 function LeerNota(id)
 	{
-			CargarNoticiasHome();
 			$('.ExtrasPlaza').html('<img src="imagenes/loading.gif" />');
 
 		//$('.NotaTitulo').html("Nose titulo extra");
@@ -1175,11 +1174,10 @@ return false;
             <div class="swiper-wrapper">
             
             
-              <div  class="swiper-slide" id="ImgPortadaPuebla" style="background-image:url(images/loading.gif); text-align:center" >
+              <div  class="swiper-slide" id="ImgPortadaPuebla" style="background-image:url(http://166.78.193.53/APPSintesis/ImpresoPortadas/Puebla/Thumbs/portada.jpg)">
               <div class="EtiquetaImpreso">
               <img src="imagenes/EtiquetasPlazas/puebla.png"></div>
               <a href="#impreso-portadas" onClick="ImprimirImpresoTodas('Puebla');">
-              <img src="http://166.78.193.53/APPSintesis/ImpresoPortadas/Puebla/Thumbs/portada.jpg">
               </a>
               <div class="reflection"></div>
               <div class="swiper-slide-shadow-left" ></div>
@@ -1187,12 +1185,10 @@ return false;
               </div>
               
               
-              <div class="swiper-slide" id="ImgPortadaNacional" style="background-image:url(images/loading.gif); text-align:center" >
+              <div class="swiper-slide" id="ImgPortadaNacional" style="background-image:url(http://166.78.193.53/APPSintesis/ImpresoPortadas/Nacional/Thumbs/portada.jpg)">
               <div class="EtiquetaImpreso">
               <img src="imagenes/EtiquetasPlazas/nacional.png"></div>
-              <a href="#impreso-portadas" onClick="ImprimirImpresoTodas('Nacional');">
-              <img src="http://166.78.193.53/APPSintesis/ImpresoPortadas/Nacional/Thumbs/portada.jpg">
-              </a>
+              <a href="#impreso-portadas" onClick="ImprimirImpresoTodas('Nacional');"></a>
               <div class="reflection"></div>
               <div class="swiper-slide-shadow-left" ></div>
               <div class="swiper-slide-shadow-right"></div>
@@ -1200,57 +1196,47 @@ return false;
               
               
               
-              <div class="swiper-slide" id="ImgPortadaTlaxcala" style="background-image:url(images/loading.gif); text-align:center">
+              <div class="swiper-slide" id="ImgPortadaTlaxcala" style="background-image:url(http://166.78.193.53/APPSintesis/ImpresoPortadas/Tlaxcala/Thumbs/portada.jpg)">
               <div class="EtiquetaImpreso">
               <img src="imagenes/EtiquetasPlazas/tlaxcala.png"></div>
-              <a href="#impreso-portadas" onClick="ImprimirImpresoTodas('Tlaxcala');">
-              <img src="http://166.78.193.53/APPSintesis/ImpresoPortadas/Tlaxcala/Thumbs/portada.jpg">
-              </a>
+              <a href="#impreso-portadas" onClick="ImprimirImpresoTodas('Tlaxcala');"></a>
               <div class="reflection"></div>
               <div class="swiper-slide-shadow-left" ></div>
               <div class="swiper-slide-shadow-right"></div>
               </div>
               
-              <div class="swiper-slide ImpresoSuplemento" id="ImgPortadaOaxaca" style="background-image:url(images/loading.gif); text-align:center" >
+              <div class="swiper-slide ImpresoSuplemento" id="ImgPortadaOaxaca" style="background-image:url(http://166.78.193.53/APPSintesis/ImpresoPortadas/Oaxaca/Thumbs/portada.jpg)">
               <div class="EtiquetaImpreso">
               <img src="imagenes/EtiquetasPlazas/oaxaca.png"></div>
-              <a href="#impreso-portadas" onClick="ImprimirImpresoTodas('Oaxaca');">
-              <img src="http://166.78.193.53/APPSintesis/ImpresoPortadas/Oaxaca/Thumbs/portada.jpg">
-              </a>
+              <a href="#impreso-portadas" onClick="ImprimirImpresoTodas('Oaxaca');"></a>
               <div class="reflection"></div>
               <div class="swiper-slide-shadow-left" ></div>
               <div class="swiper-slide-shadow-right"></div>
               </div>
               
-              <div class="swiper-slide" id="ImgPortadaHidalgo" style="background-image:url(images/loading.gif); text-align:center" >
+              <div class="swiper-slide" id="ImgPortadaHidalgo" style="background-image:url(http://166.78.193.53/APPSintesis/ImpresoPortadas/Hidalgo/Thumbs/portada.jpg)">
               <div class="EtiquetaImpreso">
               <img src="imagenes/EtiquetasPlazas/hidalgo.png"></div>
-              <a href="#impreso-portadas" onClick="ImprimirImpresoTodas('Hidalgo');">
-              <img src="http://166.78.193.53/APPSintesis/ImpresoPortadas/Hidalgo/Thumbs/portada.jpg">
-              </a>
+              <a href="#impreso-portadas" onClick="ImprimirImpresoTodas('Hidalgo');"></a>
               <div class="reflection"></div>
               <div class="swiper-slide-shadow-left" ></div>
               <div class="swiper-slide-shadow-right"></div>
               </div>
               
               
-              <div class="swiper-slide ImpresoSuplemento" id="ImgPortadaChiapas" style="background-image:url(images/loading.gif); text-align:center" >
+              <div class="swiper-slide ImpresoSuplemento" id="ImgPortadaChiapas" style="background-image:url(http://166.78.193.53/APPSintesis/ImpresoPortadas/Chiapas/Thumbs/portada.jpg)">
               <div class="EtiquetaImpreso">
               <img src="imagenes/EtiquetasPlazas/chiapas.png"></div>
-              <a href="#impreso-portadas" onClick="ImprimirImpresoTodas('Chiapas');">
-               <img src="http://166.78.193.53/APPSintesis/ImpresoPortadas/Chiapas/Thumbs/portada.jpg">
-               </a>
+              <a href="#impreso-portadas" onClick="ImprimirImpresoTodas('Chiapas');"></a>
               <div class="reflection"></div>
               <div class="swiper-slide-shadow-left" ></div>
               <div class="swiper-slide-shadow-right"></div>
               </div>
               
-              <div class="swiper-slide ImpresoSuplemento" id="ImgPortadaYucatan" style="background-image:url(images/loading.gif); text-align:center" >
+              <div class="swiper-slide ImpresoSuplemento" id="ImgPortadaYucatan" style="background-image:url(http://166.78.193.53/APPSintesis/ImpresoPortadas/Yucatan/Thumbs/portada.jpg)">
               <div class="EtiquetaImpreso">
               <img src="imagenes/EtiquetasPlazas/yucatan.png"></div>
-              <a href="#impreso-portadas" onClick="ImprimirImpresoTodas('Yucatan');">
-               <img src="http://166.78.193.53/APPSintesis/ImpresoPortadas/Yucatan/Thumbs/portada.jpg">
-               </a>
+              <a href="#impreso-portadas" onClick="ImprimirImpresoTodas('Yucatan');"></a>
               <div class="reflection"></div>
               <div class="swiper-slide-shadow-left" ></div>
               <div class="swiper-slide-shadow-right"></div>
@@ -1512,7 +1498,7 @@ function ImprimirImpresoTodas(plaza)
   
   <div style="display:inline-block; padding-left:10px; padding-bottom:0px;vertical-align:center; margin-top:8px; z-index:-1;  "> <a href="#video" onClick="galeria_video('nacionales')">  <img src="imagenes/iconos/azules/video@2x.png" width="50"  > </a> </div>
   
-  <div style=" display:inline-block;padding-left:10px; padding-bottom:0px;vertical-align:center;margin-top:8px;" > <a href="#galeria"  onClick="CargarNoticiasHome();"> <img src="imagenes/iconos/azules/galeria@2x.png" width="50"  > </a> </div>
+  <div style=" display:inline-block;padding-left:10px; padding-bottom:0px;vertical-align:center;margin-top:8px;" > <a href="#galeria"> <img src="imagenes/iconos/azules/galeria@2x.png" width="50"  > </a> </div>
   
     <div style="float:right;display:inline-block;padding-right:10px;padding-bottom:0px;vertical-align:center;margin-top:8px; "> <a href="javascript:;" onClick="pagDesarrollo();"><img src="imagenes/iconos/azules/web@2x.png"  width="50" > </a> </div>
 
