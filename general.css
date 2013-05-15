@@ -556,7 +556,7 @@ body{
 /*Slide Vertical*/
 .DivVertical{
 	width:296px;
-	height:300px;
+	height:auto;
 	}
 .ContenedorSlideVertical {
 	width: 296px;
@@ -606,7 +606,7 @@ height:200px;
 	background: rgba(204,204,204,.9);
 	width:296px;
 /*   width:260px;
-*/   height:125px;
+*/   height:112px;
 /*	height:125.7px;
 */	/*margin-left:12px;
 	margin-bottom:10px;
@@ -625,9 +625,9 @@ height:200px;
 .SlideVerticalImagen img {
 	display:inline-block;
 	width: 125.7px;
-	height:135.7px;
-/*	height:135.7px;*/
-	background:#3FF;
+	height:auto;
+/*	height:125.7px;
+*/	background:#3FF;
 /*	box-shadow: 5px 5px 5px #000;
 */}
 .SlideVerticalContenido {
