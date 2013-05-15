@@ -606,7 +606,7 @@ height:200px;
 	background: rgba(204,204,204,.9);
 	width:296px;
 /*   width:260px;
-*/   height:112px;
+*/   height:125px;
 /*	height:125.7px;
 */	/*margin-left:12px;
 	margin-bottom:10px;
@@ -626,8 +626,8 @@ height:200px;
 	display:inline-block;
 	width: 125.7px;
 	height:auto;
-/*	height:125.7px;
-*/	background:#3FF;
+/*	height:135.7px;*/
+	background:#3FF;
 /*	box-shadow: 5px 5px 5px #000;
 */}
 .SlideVerticalContenido {
