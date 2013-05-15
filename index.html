@@ -186,11 +186,34 @@
 				//alert("conexion:"+navigator.connection.type);
 					slidePrincipal();
 					slideMiniatura();
-					slideVertical();
+					slideVertical2();
 /*					galeriaImagenes();
 */					galeria_video('nacionales');	
 					minuto_minuto();
 					CargarNoticiasHomeGal();
+				
+				function slideVertical2()
+			{//ContenedorDivMedio
+				$('.DivVertical').html('<img src="imagenes/loading.gif" />');
+				$.ajax({
+				type: "POST",
+				url: "http://166.78.193.53/APPSintesis/php/slide_vertical.php",
+				data: "",
+				cache: false,
+				success: function(message)
+				{
+					$('.DivVertical').html(
+					' <div  class="ContenedorSlideVertical" id="content_slideVertical" >'+message+'</div>'
+					
+					)
+				}
+				});
+			}
+				
+				
+				
+				
+				
 				
                
 				
@@ -355,6 +378,8 @@
 		galeriaImagenes();
 		galeria_video();	
 		minuto_minuto();
+		
+		
 		function slideVertical2()
 			{//ContenedorDivMedio
 				$('.DivVertical').html('<img src="imagenes/loading.gif" />');
