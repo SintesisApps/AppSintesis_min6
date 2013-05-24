@@ -182,7 +182,7 @@
     <!-- carga de noticias -->
     <script>
 			$(document).ready(function() {
-				
+				document.addEventListener('touchmove', function(e) { e.preventDefault(); }, false);
 
 				CargarNoticiasHome();
 				CargarNoticiasHomeGal();

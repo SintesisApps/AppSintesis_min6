@@ -30,12 +30,13 @@
     <preference name="target-device"    value="universal" />
     <preference name="fullscreen"       value="true" />
 	<preference name="webviewbounce" value="false" />
-	<preference name="UIWebViewBounce" value="true" />
+	<preference name="UIWebViewBounce" value="false" />
 	<preference name="HideKeyboardFormAccessoryBar" value="false" />
 	  <preference name="stay-in-webview" value="false" />
 	<preference name="DisallowOverscroll" value="true" />
 	<preference name="stay-in-webview" value="true" />
 	 <preference name="ios-statusbarstyle" value="black-translucen" />
+	 <preference name="SuppressesIncrementalRendering" value="true" />
 
     <icon src="imagenes/iconos/iconos/1024.png" />
     <icon src="imagenes/iconos/iconos/1024.png"   gap:platform="android"    gap:density="ldpi" />
