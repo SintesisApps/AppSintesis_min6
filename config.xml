@@ -31,6 +31,7 @@
     <preference name="fullscreen"       value="true" />
 	<preference name="webviewbounce" value="false" />
 	<preference name="UIWebViewBounce" value="true" />
+	<preference name="HideKeyboardFormAccessoryBar" value="false" />
 	  <preference name="stay-in-webview" value="false" />
 	<preference name="DisallowOverscroll" value="false" />
 	<preference name="stay-in-webview" value="true" />
