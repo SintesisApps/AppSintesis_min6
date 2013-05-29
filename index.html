@@ -6,9 +6,14 @@
 <!--<meta content="width=device-width, initial-scale=1.0, minimum-scale=.5, maximum-scale=1.0, user-scalable=yes" name="viewport" />
 --><meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=320, height=480, target-densitydpi=device-dpi" />
 
-<link href="general.css" rel="stylesheet">
+<!--<link href="general.css" rel="stylesheet">
 <link href="css/transiciones.css" rel="stylesheet">
 <link href="css/alerta.css" rel="stylesheet" type="text/css" />
+-->
+<link href="http://166.78.193.53/RecursosApp/minios/general.css" rel="stylesheet">
+<link href="http://166.78.193.53/RecursosApp/minios/css/transiciones.css" rel="stylesheet">
+<link href="http://166.78.193.53/RecursosApp/minios/css/alerta.css" rel="stylesheet" type="text/css" />
+
 <script src="phonegap.js" type="text/javascript"></script>
 <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
 
@@ -21,128 +26,6 @@
 	<link href="js/galeria/photoswipe.css" type="text/css" rel="stylesheet" />
 	<script type="text/javascript" src="js/galeria/lib/klass.min.js"></script>
 	<script type="text/javascript" src="js/galeria/code.photoswipe-3.0.4.min.js"></script>
-	<!--<script type="text/javascript">
-
-		(function(window, PhotoSwipe){
-		
-			document.addEventListener('DOMContentLoaded', function(){
-			
-				var
-					options = {},
-					instance = PhotoSwipe.attach( window.document.querySelectorAll('#Gallery a'), options );
-					
-					
-					// onBeforeShow
-					instance.addEventHandler(PhotoSwipe.EventTypes.onBeforeShow, function(e){
-						console.log('onBeforeShow');
-					});
-					
-					// onShow
-					instance.addEventHandler(PhotoSwipe.EventTypes.onShow, function(e){
-						console.log('onShow');
-					});
-					
-					// onBeforeHide
-					instance.addEventHandler(PhotoSwipe.EventTypes.onBeforeHide, function(e){
-						console.log('onBeforeHide');
-					});
-					
-					// onHide
-					instance.addEventHandler(PhotoSwipe.EventTypes.onHide, function(e){
-						console.log('onHide');
-					});
-					
-					// onDisplayImage
-					instance.addEventHandler(PhotoSwipe.EventTypes.onDisplayImage, function(e){
-						console.log('onDisplayImage{');
-						console.log('onDisplayImage - e.action = ' + e.action);
-						console.log('onDisplayImage - e.index = ' + e.index);
-						console.log(instance.getCurrentImage());
-						console.log('onDisplayImage}');
-					});
-					
-					// onResetPosition
-					instance.addEventHandler(PhotoSwipe.EventTypes.onResetPosition, function(e){
-						console.log('onResetPosition');
-					});
-					
-					// onSlideshowStart
-					instance.addEventHandler(PhotoSwipe.EventTypes.onSlideshowStart, function(e){
-						console.log('onSlideshowStart');
-					});
-					
-					// onSlideshowStop
-					instance.addEventHandler(PhotoSwipe.EventTypes.onSlideshowStop, function(e){
-						console.log('onSlideshowStop');
-					});
-					
-					// onTouch
-					instance.addEventHandler(PhotoSwipe.EventTypes.onTouch, function(e){
-						console.log('onTouch{');
-						console.log('onTouch - e.action = ' + e.action);
-						console.log('onTouch - e.point = ');
-						console.log(e.point);
-						console.log('onTouch}');
-					});
-					
-					// onBeforeCaptionAndToolbarShow
-					instance.addEventHandler(PhotoSwipe.EventTypes.onBeforeCaptionAndToolbarShow, function(e){
-						console.log('onBeforeCaptionAndToolbarShow');
-					});
-					
-					// onCaptionAndToolbarShow
-					instance.addEventHandler(PhotoSwipe.EventTypes.onCaptionAndToolbarShow, function(e){
-						console.log('onCaptionAndToolbarShow');
-					});
-					
-					// onBeforeCaptionAndToolbarHide
-					instance.addEventHandler(PhotoSwipe.EventTypes.onBeforeCaptionAndToolbarHide, function(e){
-						console.log('onBeforeCaptionAndToolbarHide');
-					});
-					
-					// onCaptionAndToolbarHide
-					instance.addEventHandler(PhotoSwipe.EventTypes.onCaptionAndToolbarHide, function(e){
-						console.log('onCaptionAndToolbarHide');
-					});
-					
-					// onToolbarTap
-					instance.addEventHandler(PhotoSwipe.EventTypes.onToolbarTap, function(e){
-						console.log('onToolbarTap');
-						console.log(e);
-					});
-					
-					// onBeforeZoomPanRotateShow
-					instance.addEventHandler(PhotoSwipe.EventTypes.onBeforeZoomPanRotateShow, function(e){
-						console.log('onBeforeZoomPanRotateShow');
-					});
-					
-					// onZoomPanRotateShow
-					instance.addEventHandler(PhotoSwipe.EventTypes.onZoomPanRotateShow, function(e){
-						console.log('onZoomPanRotateShow');
-					});
-					
-					// onBeforeZoomPanRotateHide
-					instance.addEventHandler(PhotoSwipe.EventTypes.onBeforeZoomPanRotateHide, function(e){
-						console.log('onBeforeZoomPanRotateHide');
-					});
-					
-					// onZoomPanRotateHide
-					instance.addEventHandler(PhotoSwipe.EventTypes.onZoomPanRotateHide, function(e){
-						console.log('onZoomPanRotateHide');
-					});
-					
-					// onZoomPanRotateTransform
-					instance.addEventHandler(PhotoSwipe.EventTypes.onZoomPanRotateTransform, function(e){
-						console.log('onZoomPanRotateTransform');
-						console.log(e);
-					});
-					
-			}, false);
-			
-			
-		}(window, window.Code.PhotoSwipe));
-		
-	</script>-->
     
     
 <!-- geolocalizacion -->
@@ -184,7 +67,8 @@
 			$(document).ready(function() {
 				
 
-				CargarNoticiasHome();
+				slidePrincipal();
+				slideVertical();
 				CargarNoticiasHomeGal();
 				
 				
@@ -194,7 +78,7 @@
 			{
 				$.ajax({
 						type: "POST",
-						url: "http://166.78.193.53/APPSintesis/php/CargarGaleriaImagenes2.php",
+						url: "http://166.78.193.53/RecursosApp/minios/php/CargarGaleriaImagenes2.php",
 						data: "",
 						cache: false,
 						success: function(message)
@@ -212,7 +96,7 @@
 				$('#cont_slideprincipal').html('<img src="imagenes/loading.gif" />');
 				 $.ajax({
 					type: "POST",
-				url: "http://166.78.193.53/APPSintesis/php/slideprincipal_ip.php",
+				url: "http://166.78.193.53/RecursosApp/minios/php/slideprincipal_ip.php",
 				data: "",
 				cache: false,
 				success: function(message)
@@ -229,7 +113,7 @@
 				/*SLIDE MINIATURAS*/
 				$.ajax({
 					type: "POST",
-				url: "http://166.78.193.53/APPSintesis/php/slide_miniatura.php",
+				url: "http://166.78.193.53/RecursosApp/minios/php/slide_miniatura.php",
 				data: "",
 				cache: false,
 				success: function(message)
@@ -246,7 +130,7 @@
 				
 				$.ajax({
 					type: "POST",
-				url: "http://166.78.193.53/APPSintesis/php/slide_vertical.php",
+				url: "http://166.78.193.53/RecursosApp/minios/php/slide_vertical.php",
 				data: "",
 				cache: false,
 				success: function(message)
@@ -261,7 +145,7 @@
 			{
 				$.ajax({
 					type: "POST",
-				url: "http://166.78.193.53/APPSintesis/php/galeria_imagenes.php",
+				url: "http://166.78.193.53/RecursosApp/minios/php/galeria_imagenes.php",
 				data: "",
 				cache: false,
 				success: function(message)
@@ -276,7 +160,7 @@
 
 				$.ajax({
 					type: "POST",
-				url: "http://166.78.193.53/APPSintesis/php/galeria_video.php",
+				url: "http://166.78.193.53/RecursosApp/minios/php/galeria_video.php",
 				//data: "",
 				data: "plaza="+plaza,
 				cache: false,
@@ -306,7 +190,7 @@
 			{
 				$.ajax({
 					type: "POST",
-				url: "http://166.78.193.53/APPSintesis/php/minutoaminuto.php",
+				url: "http://166.78.193.53/RecursosApp/minios/php/minutoaminuto.php",
 				data: "",
 				cache: false,
 				success: function(message)
@@ -356,7 +240,7 @@
 				$('.DivVertical').html('<img src="imagenes/loading.gif" />');
 				$.ajax({
 				type: "POST",
-				url: "http://166.78.193.53/APPSintesis/php/slide_vertical.php",
+				url: "http://166.78.193.53/RecursosApp/minios/php/slide_vertical.php",
 				data: "",
 				cache: false,
 				success: function(message)
@@ -381,7 +265,7 @@
 			{
 
 				type: "POST",
-				url: "http://166.78.193.53/APPSintesis/php/CargarNoticiasPlazas_ip.php",
+				url: "http://166.78.193.53/RecursosApp/minios/php/CargarNoticiasPlazas_ip.php",
 				data: "plaza="+plaza,
 				cache: false,
 				success: function(message)
@@ -430,7 +314,7 @@
 			{
 
 				type: "POST",
-				url: "http://166.78.193.53/APPSintesis/php/cargar_seccion_cel.php",
+				url: "http://166.78.193.53/RecursosApp/minios/php/cargar_seccion_cel.php",
 				data: "seccion="+seccion,
 				cache: false,
 				success: function(message)
@@ -474,102 +358,7 @@
 		 
 	}
 
-		
-	/*	function CargarNoticiasHome()
-	{
-		slidePrincipal();
-		slideMiniatura();
-		document.getElementById("vertical_seccion").innerHTML="";
-		slideVertical();
-		galeriaImagenes();
-		galeria_video();	
-		minuto_minuto();
-	} 
 	
-	function CargarNoticiasPlaza(plaza)
-	{
-			$.ajax(
-			{
-
-				type: "POST",
-				url: "http://166.78.193.53/APPSintesis/php_min/CargarNoticiasPlazas.php",
-				data: "plaza="+plaza,
-				cache: false,
-				success: function(message)
-				{
-					datos = JSON.parse(message);
-					for(i=0;i<datos.length;i++)
-					{
-						document.getElementById("name_SeccionSeccion").innerHTML="";
-						$(".SeccionSeccion").html(
-							datos[i].titulo_seccion
-						);
-						$(".ContenedorPrincipalSeccion").html(
-							datos[i].slide_principal
-						);
-						
-						$(".DivVertical").html(
-						datos[i].slide_vertical
-						);
-						
-						$("#minuto_plaza").html(
-						datos[i].ultimas_noticias
-						);
-					}
-					
-				
-				
-				}
-			});
-
-	} */
-
-	
-	/*function CargarNoticiasHome()
-	{
-		setTimeout(CargarNoticiasHome,60000);
-			$.ajax(
-			{
-
-				type: "POST",
-				url: "http://166.78.193.53/APPSintesis/php/CargarNoticiasHome.php",
-				data: "",
-				cache: false,
-				success: function(message)
-				{	
-				$('#ContenedorSlides').html(message);
-				
-				}
-			});
-
-	} 
-	
-	function CargarNoticiasPlaza(plaza)
-	{
-			$.ajax(
-			{
-
-				type: "POST",
-				url: "http://166.78.193.53/APPSintesis/php/CargarNoticiasPlazas.php",
-				data: "plaza="+plaza,
-				cache: false,
-				success: function(message)
-				{
-				$("#plaza").html(message);
-				
-				}
-			});
-
-	} 
-
-
-	
-//CargarNoticiasHome();*/
-
-/*$(window).load(function() {
-      $('#cargando').hide();
-});*/
-
 function LeerNota(id)
 	{
 			CargarNoticiasHome();
@@ -580,7 +369,7 @@ function LeerNota(id)
 			{
 
 				type: "POST",
-				url: "http://166.78.193.53/APPSintesis/php/Nota_ip.php",
+				url: "http://166.78.193.53/RecursosApp/minios/php/Nota_ip.php",
 				data: "id="+id,
 				cache: false,
 				success: function(message)
@@ -664,57 +453,6 @@ function LeerNota(id)
   <!--Slide Principal-->
       <div  class="SlidePrincipal ContenedorSlidePrincipal" id="cont_slideprincipal" >
       
-          <!--  <a href="#nota">
-            <div style="display:inline-block; overflow:hidden">
-              <div class="SlidePrincipalImagen"> <img src="imagenes/imagenes-articulos/1.jpg"> </div>
-              <div class="SlidePrincipalContenido">
-                <div class="SlidePrincipalTitulo"> Signan convenio para obras en pueblos indígenas </div>
-                <div class="SlidePrincipalSeccion"> METRÓPOLI </div>
-                <div class="SlidePrincipalAutor"> Clauda Aguilar/Síntesis </div>
-                <div class="SlidePrincipalFecha"> 2013-03-28 14:27:29 </div>
-                <div class="SlidePrincipalSumario"> Sumario </div>
-              </div>
-            </div>
-            </a> 
-            
-            <div style="display:inline-block; overflow:hidden">
-              <div class="PublicidadSlidePrincipal">
-              <img src="imagenes/publicidad/1.jpg">
-              </div>
-            </div>
-            
-            <a href="#nota">
-            <div style="display:inline-block; overflow:hidden">
-              <div class="SlidePrincipalImagen"> <img src="imagenes/imagenes-articulos/3.jpg"> </div>
-              <div class="SlidePrincipalContenido">
-                <div class="SlidePrincipalTitulo"> Signan convenio para obras en pueblos indígenas </div>
-                <div class="SlidePrincipalSeccion"> METRÓPOLI </div>
-                <div class="SlidePrincipalAutor"> Clauda Aguilar/Síntesis </div>
-                <div class="SlidePrincipalFecha"> 2013-03-28 14:27:29 </div>
-                <div class="SlidePrincipalSumario"> Sumario </div>
-              </div>
-            </div>
-            </a> 
-            
-            <a href="#nota">
-            <div style="display:inline-block; overflow:hidden">
-              <div class="SlidePrincipalImagen"> <img src="imagenes/imagenes-articulos/4.jpg"> </div>
-              <div class="SlidePrincipalContenido">
-                <div class="SlidePrincipalTitulo"> Signan convenio para obras en pueblos indígenas </div>
-                <div class="SlidePrincipalSeccion"> METRÓPOLI </div>
-                <div class="SlidePrincipalAutor"> Clauda Aguilar/Síntesis </div>
-                <div class="SlidePrincipalFecha"> 2013-03-28 14:27:29 </div>
-                <div class="SlidePrincipalSumario"> Sumario </div>
-              </div>
-            </div>
-            </a> 
-            
-            <div style="display:inline-block; overflow:hidden">
-              <div class="PublicidadSlidePrincipal">
-              <img src="imagenes/publicidad/9.jpg">
-              </div>
-            </div>
-        -->
         </div>
         
   <!--Slide Principal--> 
@@ -852,71 +590,6 @@ function LeerNota(id)
     
       <div style="float:left;margin-right:-30000px;">
         
-        <!--<div class="SubContenedorPrincipalSeccion"> 
-            <a href="#nota">
-              <div class="ContenidoPrincipalSeccion">
-                <div class="ImagenPrincipalSeccion"> <img src="imagenes/imagenes-articulos/10.jpg" > </div>
-                <div class="TextoPrincipalSeccion">
-                  <div class="TituloPrincipalSeccion"> Signan convenio para obras en pueblos indígenas </div>
-                  <div class="SeccionPrincipalSeccion"> METRÓPOLI </div>
-                 <div class="FechaPrincipalSeccion"> 2013-03-28 14:27:29 </div>
-                </div>
-              </div>
-              </a> 
-              
-              <a href="#nota">
-              <div class="ContenidoPrincipalSeccion">
-                <div class="ImagenPrincipalSeccion"> <img src="imagenes/imagenes-articulos/2.jpg" > </div>
-                <div class="TextoPrincipalSeccion">
-                  <div class="TituloPrincipalSeccion"> Signan convenio para obras en pueblos indígenas </div>
-                  <div class="SeccionPrincipalSeccion"> METRÓPOLI </div>
-                  <div class="FechaPrincipalSeccion"> 2013-03-28 14:27:29 </div>
-                </div>
-              </div>
-              </a> 
-              
-              <div class="ContenidoPrincipalSeccion">
-                <div class="PublicidadPrincipalSeccion"> <img src="imagenes/publicidad/5.jpg" > </div>
-              </div>
-              
-              <a href="#nota">
-              <div class="ContenidoPrincipalSeccion">
-                <div class="ImagenPrincipalSeccion"> <img src="imagenes/imagenes-articulos/3.jpg" > </div>
-                <div class="TextoPrincipalSeccion">
-                  <div class="TituloPrincipalSeccion"> Signan convenio para obras en pueblos indígenas </div>
-                  <div class="SeccionPrincipalSeccion"> METRÓPOLI </div>
-                  <div class="FechaPrincipalSeccion"> 2013-03-28 14:27:29 </div>
-                </div>
-              </div>
-              </a> 
-              
-              <a href="#nota">
-              <div class="ContenidoPrincipalSeccion">
-                <div class="ImagenPrincipalSeccion"> <img src="imagenes/imagenes-articulos/4.jpg" > </div>
-                <div class="TextoPrincipalSeccion">
-                  <div class="TituloPrincipalSeccion"> Signan convenio para obras en pueblos indígenas </div>
-                  <div class="SeccionPrincipalSeccion"> METRÓPOLI </div>
-                  <div class="FechaPrincipalSeccion"> 2013-03-28 14:27:29 </div>
-                </div>
-              </div>
-              </a> 
-              
-              <div class="ContenidoPrincipalSeccion">
-                <div class="PublicidadPrincipalSeccion"> <img src="imagenes/publicidad/8.jpg" > </div>
-              </div>
-              
-              <a href="#nota">
-              <div class="ContenidoPrincipalSeccion">
-                <div class="ImagenPrincipalSeccion"> <img src="imagenes/imagenes-articulos/4.jpg" > </div>
-                <div class="TextoPrincipalSeccion">
-                  <div class="TituloPrincipalSeccion"> Signan convenio para obras en pueblos indígenas </div>
-                  <div class="SeccionPrincipalSeccion"> METRÓPOLI </div>
-                  <div class="FechaPrincipalSeccion"> 2013-03-28 14:27:29 </div>
-                </div>
-              </div>
-              </a> 
-              
-          </div>-->
           
         
       </div>
@@ -925,104 +598,11 @@ function LeerNota(id)
     
     <!--Slide Vertical Seccion-->
     <div class="DivVertical" id="vertical_seccion">
-      <!--<div  class="ContenedorSlideVertical" >
-        <div > <a href="#nota" onclick="LeerNota('.$id_nota_app.')">
-          <div class="SlideVerticalArticulo">
-           
-            <div class="SlideVerticalImagen"><img src="imagenes/imagenes-articulos/6.jpg" > </div>
-            <div class="SlideVerticalContenido">
-              <div class="SlideVerticalTitulo">Recibirá Puebla el Grand Slam...</div>
-              <div class="SlideVerticalAutor">Alma Liliana Velazquez /Síntesis</div>
-              <div class="SlideVerticalFecha">2013-03-28 17:40:48</div>
-            </div>
-          </div>
-          </a> </div>
-        <div > <a href="#nota" onclick="LeerNota('.$id_nota_app.')">
-          <div class="SlideVerticalArticulo">
-           
-            <div class="SlideVerticalImagen"><img src="imagenes/imagenes-articulos/3.jpg" > </div>
-            <div class="SlideVerticalContenido">
-              <div class="SlideVerticalTitulo">Recibirá Puebla el Grand Slam...</div>
-              <div class="SlideVerticalAutor">Alma Liliana Velazquez /Síntesis</div>
-              <div class="SlideVerticalFecha">2013-03-28 17:40:48</div>
-            </div>
-          </div>
-          </a> </div>
-          
-          <div > 
-            <div class="PublicidadSlideVertical">
-                <img src="imagenes/publicidad/2.jpg">
-            </div>
-        </div>
-        
-        <div > <a href="#nota" onclick="LeerNota('.$id_nota_app.')">
-          <div class="SlideVerticalArticulo">
-           
-            <div class="SlideVerticalImagen"><img src="imagenes/imagenes-articulos/2.jpg" > </div>
-            <div class="SlideVerticalContenido">
-              <div class="SlideVerticalTitulo">Recibirá Puebla el Grand Slam...</div>
-              <div class="SlideVerticalAutor">Alma Liliana Velazquez /Síntesis</div>
-              <div class="SlideVerticalFecha">2013-03-28 17:40:48</div>
-            </div>
-          </div>
-          </a> </div>
-        <div > <a href="#nota" onclick="LeerNota('.$id_nota_app.')">
-          <div class="SlideVerticalArticulo">
-            
-            <div class="SlideVerticalImagen"><img src="imagenes/imagenes-articulos/7.jpg" > </div>
-            <div class="SlideVerticalContenido">
-              <div class="SlideVerticalTitulo">Recibirá Puebla el Grand Slam...</div>
-              <div class="SlideVerticalAutor">Alma Liliana Velazquez /Síntesis</div>
-              <div class="SlideVerticalFecha">2013-03-28 17:40:48</div>
-            </div>
-          </div>
-          </a> </div>
-      </div>-->
     </div>
     <!--Slide Vertical Seccion--> 
     
     <!--Contenedor Minuto a Minuto Video y Suplementos-->
-<!--    <div class="ContenedorDivMedio">
-      <div class="ContenedorMinutovideo">
-        <div class="Minuto_A_Minuto">
-          <div style="width:90%;">
-            <div style="display:inline-block; color: rgb(0,85,143);"> 10:49 PM </div>
-            <div style="display:inline-block; color: rgb(151,151,151);"> / Mantendrá Seproci vigilancia vigilancia... </div>
-            <hr>
-          </div>
-          <div style="width:90%;">
-            <div style="display:inline-block; color: rgb(0,85,143);"> 10:49 PM </div>
-            <div style="display:inline-block; color: rgb(151,151,151);"> / Mantendrá Seproci vigilancia vigilancia... </div>
-            <hr>
-          </div>
-          <div style="width:90%;">
-            <div style="display:inline-block; color: rgb(0,85,143);"> 10:49 PM </div>
-            <div style="display:inline-block; color: rgb(151,151,151);"> / Mantendrá Seproci vigilancia vigilancia... </div>
-            <hr>
-          </div>
-          <div style="width:90%;">
-            <div style="display:inline-block; color: rgb(0,85,143);"> 10:49 PM </div>
-            <div style="display:inline-block; color: rgb(151,151,151);"> / Mantendrá Seproci vigilancia vigilancia... </div>
-            <hr>
-          </div>
-          <div style="width:90%;">
-            <div style="display:inline-block; color: rgb(0,85,143);"> 10:49 PM </div>
-            <div style="display:inline-block; color: rgb(151,151,151);"> / Mantendrá Seproci vigilancia vigilancia... </div>
-          </div>
-        </div>
-        <div class="Video"> <img src="imagenes/video.png"> </div>
-      </div>
-      <div class="Suplementos"> 
-        <div class="DivSuplementos">
-            <div style="float:left;margin-right:-30000px;">
-            	<div class="ContSuplemento">
-            		<img src="imagenes/publicidad/10.jpg">
-                </div>
-            </div>
-        </div>
-    </div>
-    </div>
--->    <!--Contenedor Minuti a Minuto Video y Suplementos--> 
+   <!--Contenedor Minuti a Minuto Video y Suplementos--> 
     
   </div>
 </div>
@@ -1108,41 +688,6 @@ return false;
 <!--Impreso-->
 <script>
 
-/*function ImprimirImpresoPortada()
-	{
-			$.ajax(
-			{
-
-				type: "POST",
-				url: "http://166.78.193.53/APPSintesis/php/ImprimirImpresoPortadas.php",
-				data: "",
-				cache: false,
-				success: function(message)
-				{
-					message=message.split("&");
-					
-	$("#ImgPortadaPuebla").css("background-image", "url(http://166.78.193.53/APPSintesis/ImpresoPortadas/Puebla/Thumbs/"+message[1]+".jpg)");
-	
-	$("#ImgPortadaTlaxcala").css("background-image", "url(http://166.78.193.53/APPSintesis/ImpresoPortadas/Tlaxcala/Thumbs/"+message[2]+".jpg)");
-	
-	$("#ImgPortadaChiapas").css("background-image", "url(http://166.78.193.53/APPSintesis/ImpresoPortadas/Chiapas/Thumbs/"+message[5]+".jpg)");
-	
-	$("#ImgPortadaHidalgo").css("background-image", "url(http://166.78.193.53/APPSintesis/ImpresoPortadas/Hidalgo/Thumbs/"+message[3]+".jpg)");
-	
-	$("#ImgPortadaOaxaca").css("background-image", "url(http://166.78.193.53/APPSintesis/ImpresoPortadas/Oaxaca/Thumbs/"+message[4]+".jpg)");
-	
-	$("#ImgPortadaYucatan").css("background-image", "url(http://166.78.193.53/APPSintesis/ImpresoPortadas/Yucatan/Thumbs/"+message[6]+".jpg)");
-	
-	$("#ImgPortadaNacional").css("background-image", "url(http://166.78.193.53/APPSintesis/ImpresoPortadas/Nacional/Thumbs/"+message[7]+".jpg)");
-				
-				
-				
-				
-				}
-				
-			});
-
-	}*/
 	
 </script>
 
