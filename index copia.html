@@ -66,7 +66,7 @@
     <script>
 			$(document).ready(function() {
 				document.addEventListener("deviceready", function(){
- 				//mantenemos el loding por 7 segundo
+
 				slidePrincipal();
 				slideVertical();
 				CargarNoticiasHomeGal();
@@ -95,17 +95,17 @@
 			function slidePrincipal()
 			{
 				
-				//$('#cont_slideprincipal').html('<img src="imagenes/loading.gif" />');
+				$('#cont_slideprincipal').html('<img src="imagenes/loading.gif" />');
 				 $.ajax({
 					type: "POST",
 				url: "http://166.78.193.53/RecursosApp/minios/php/slideprincipal_ip.php",
 				data: "",
 				cache: false,
-					success: function(message)
-					{	
-				
-						$('#cont_slideprincipal').html(message);	
-					}
+				success: function(message)
+				{	
+				setInterval($('#cont_slideprincipal').html(message),5000);
+<!--				$('#cont_slideprincipal').html(message);-->	
+			}
 				});
 				
 				
@@ -127,7 +127,7 @@
 			function slideVertical()
 			{
 				
-				//$('#content_slideVertical').html('<img src="imagenes/loading.gif" />');
+				$('#content_slideVertical').html('<img src="imagenes/loading.gif" />');
 				
 				
 				$.ajax({
@@ -137,7 +137,8 @@
 				cache: false,
 				success: function(message)
 				{	
-					$('#content_slideVertical').html(message);
+					setInterval($('#content_slideVertical').html(message),5000);
+				<!--$('#content_slideVertical').html(message);-->
 				}
 				});
 			}
@@ -230,8 +231,6 @@
 		slideMiniatura();
 		minuto_minuto();
 		*/
-		
-		document.getElementById("cargando").style.display='';
 		slideVertical2();
 		slidePrincipal();
 		galeriaImagenes();
@@ -240,7 +239,7 @@
 		
 		function slideVertical2()
 			{//ContenedorDivMedio
-				//$('.DivVertical').html('<img src="imagenes/loading.gif" />');
+				$('.DivVertical').html('<img src="imagenes/loading.gif" />');
 				$.ajax({
 				type: "POST",
 				url: "http://166.78.193.53/RecursosApp/minios/php/slide_vertical.php",
@@ -248,21 +247,21 @@
 				cache: false,
 				success: function(message)
 				{
-					$('#vertical_home').html(
+					$('.DivVertical').html(
 					' <div  class="ContenedorSlideVertical" id="content_slideVertical" >'+message+'</div>'
 					
 					)
 				}
 				});
 			}
-		setInterval(function(){document.getElementById("cargando").style.display='none'},10000);
+		
 		
 	} 
 	
 	function CargarNoticiasPlaza(plaza)
 	{			
-			//$('.ContenedorPrincipalSeccion').html('<img src="imagenes/loading.gif" />');
-			//$('.DivVertical').html('<img src="imagenes/loading.gif" />');
+			$('.ContenedorPrincipalSeccion').html('<img src="imagenes/loading.gif" />');
+			$('.DivVertical').html('<img src="imagenes/loading.gif" />');
 
 			$.ajax(
 			{
@@ -285,13 +284,14 @@
 					$("#name_SeccionSeccion").addClass('SeccionSeccion');
 					//color
 					//$("#name_SeccionSeccion").css({'background':'#5abfcf'});
-					
+						
+					setInterval($(".ContenedorPrincipalSeccion").html(datos[i].slide_principal),5000);
+					setInterval($(".DivVertical").html(datos[i].slide_vertical),5000);
 
-						$(".ContenedorPrincipalSeccion").html(datos[i].slide_principal);	
-						$(".DivVertical").html(datos[i].slide_vertical);	
+<!--						$(".ContenedorPrincipalSeccion").html(datos[i].slide_principal);-->	
+					
+<!--						$(".DivVertical").html(datos[i].slide_vertical);-->	
 						
-						
-/*						
 						$("#minuto_plaza").html(
 						datos[i].ultimas_noticias
 						);
@@ -299,8 +299,6 @@
 						$(".Video_seccion").html(
 						datos[i].video
 						);
-*/						
-						setInterval(function(){document.getElementById("cargando").style.display='none'},12000);
 					}
 					
 				
@@ -311,9 +309,9 @@
 	} 
 	function cargar_seccion(seccion)
 	{
-			//$('.ContenedorPrincipalSeccion').html('<img src="imagenes/loading.gif" />');
-			//$('.DivVertical').html('<img src="imagenes/loading.gif" />');
-		document.getElementById("cargando").style.display='';
+			$('.ContenedorPrincipalSeccion').html('<img src="imagenes/loading.gif" />');
+			$('.DivVertical').html('<img src="imagenes/loading.gif" />');
+
 		 $.ajax(
 			{
 
@@ -338,21 +336,21 @@
 					$("#name_SeccionSeccion").addClass('SeccionSeccion');
 						
 						
+					setInterval($(".ContenedorPrincipalSeccion").html(datos[i].slide_principal),5000);
+					setInterval($(".DivVertical").html(datos[i].slide_vertical),5000);
 						
 						
-						$(".ContenedorPrincipalSeccion").html(datos[i].slide_principal);
+/*						$(".ContenedorPrincipalSeccion").html(datos[i].slide_principal);
+						
 						$(".DivVertical").html(datos[i].slide_vertical);	
-						
-/*						$("#minuto_plaza").html(
+*/						
+						$("#minuto_plaza").html(
 						datos[i].ultimas_noticias
 						);
 						
 						$(".Video_seccion").html(
 						datos[i].video
 						);
-*/					
-					
-						setInterval(function(){document.getElementById("cargando").style.display='none'},12000);
 					}
 					
 					
@@ -365,9 +363,8 @@
 	
 function LeerNota(id)
 	{
-		document.getElementById("cargando").style.display='';
 			CargarNoticiasHome();
-			//$('.ExtrasPlaza').html('<img src="imagenes/loading.gif" />');
+			$('.ExtrasPlaza').html('<img src="imagenes/loading.gif" />');
 
 		//$('.NotaTitulo').html("Nose titulo extra");
 			$.ajax(
@@ -385,8 +382,14 @@ function LeerNota(id)
 					{
 						
 					
-					$('#img_cont').html(
-					datos[i].imagen 
+					$('.ImagenesNotaImagen').html(
+					'<img src="http://166.78.193.53/images/imagenes-articulos/'+datos[i].imagen+'">'+
+					'<div class="ZoomImagenNota">'+
+						'<a href="http://166.78.193.53/images/imagenes-articulos/'+datos[i].imagen+'" >'+
+						'</a>'+
+					'</div>'+
+					'<div class="MasImagenNota">'+
+					'</div>'
 					);
 					
 					document.getElementById("name_section").innerHTML="";
@@ -420,9 +423,9 @@ function LeerNota(id)
 					datos[i].nota
 					);
 					
-					$('.ExtrasPlaza').html(datos[i].nota_extra);
+					setInterval($('.ExtrasPlaza').html(datos[i].nota_extra),5000);
 
-					setInterval(function(){document.getElementById("cargando").style.display='none'},12000);					
+					
 <!--					$('.ExtrasPlaza').html(datos[i].nota_extra);-->	
 				
 					
@@ -521,24 +524,46 @@ function LeerNota(id)
   <div id="contenedor_Nota" id="ref_contenedor_Nota">
   	<div class="NotaContenedor" >
             
-        <div id="img_cont">
-        
-        
-        </div>
-
-
+   		<div id="Gallery"  class="SlidePrincipal ImagenesNota" >
+   		
+            <div style="display:inline-block; overflow:hidden">
+              <div class="ImagenesNotaImagen">
+                <!--<img src="imagenes/imagenes-articulos/1.jpg">
+                <div class="ZoomImagenNota">
+                    <a href="imagenes/imagenes-articulos/1.jpg" id="">
+                    <img src="imagenes/iconos/azules/ampliar@2x.png">
+                    </a>
+                </div>
+                <div class="MasImagenNota">
+                    <img src="imagenes/iconos/azules/otras@2x.png">
+                </div>-->
+             </div>
+            </div>
+            <!--<div style="display:inline-block; overflow:hidden">
+              <div class="ImagenesNotaImagen">
+                  <img src="imagenes/imagenes-articulos/2.jpg">
+                  <div class="ZoomImagenNota">
+                      <a href="imagenes/imagenes-articulos/2.jpg">
+                        <img src="imagenes/iconos/azules/ampliar@2x.png">
+                      </a>
+                  </div>
+              
+              </div>
+            </div>-->
+      
+      
+   		 </div>
   
   
-        <div class="NotaTitulo" id="div_nt"></div>
-        <div class="NotaSumario" id="div_ns"></div>
+        <div class="NotaTitulo"></div>
+        <div class="NotaSumario"></div>
         
 <!--         <div class="NotaAutor"></div>
--->      <div class="NotaFechaCreacion" id="div_nfc"></div>
-
+-->         <div class="NotaFechaCreacion"></div>
         
-        <div class="NotaCompleta" id="div_nc"> </div>
+        <div class="NotaCompleta"> </div>
         
-        <div class="ExtrasPlaza" id="div_nep">
+        <div class="ExtrasPlaza">
           <!--  PHP-->
          </div>
             
@@ -560,7 +585,7 @@ function LeerNota(id)
   <div> 
   
   <div class="back_nacion SeccionSeccion" id="name_SeccionSeccion" style="color:#FFF;">
-  	
+  	PUEBLA
   </div>
     <!--Slide Principal Plaza-->
     <div class="ContenedorPrincipalSeccion">
