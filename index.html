@@ -159,7 +159,7 @@
 			
 			function galeria_video(plaza)
 			{
-				document.addEventListener("deviceready", function(){
+				document.getElementById("cargando").style.display='';
 
 					$.ajax({
 						type: "POST",
@@ -172,9 +172,9 @@
 					$('.contvideogaleria').html(message);
 					}
 					});
-				setInterval(function(){document.getElementById("cargando").style.display='none'},14000);
+				setInterval(function(){document.getElementById("cargando").style.display='none'},16000);
 				
-					});
+					
 			}
 
 			
