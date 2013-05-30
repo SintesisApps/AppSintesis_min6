@@ -70,6 +70,7 @@
 				slidePrincipal();
 				slideVertical();
 				CargarNoticiasHomeGal();
+				galeria_video('nacionales');
 				setInterval(function(){document.getElementById("cargando").style.display='none'},14000);
 				
 					});
@@ -235,7 +236,7 @@
 		slideVertical2();
 		slidePrincipal();
 		galeriaImagenes();
-		galeria_video();
+		galeria_video('nacionales');	
 		CargarNoticiasHomeGal();	
 		
 		
@@ -468,7 +469,7 @@ function LeerNota(id)
   <!--Slide Miniaturas--> 
   
   <!--Slide Vertical-->
-  <div class="DivVertical">
+  <div class="DivVertical" id="vertical_home">
     <div  class="ContenedorSlideVertical" id="content_slideVertical" >
      <!--
         se carga de php
