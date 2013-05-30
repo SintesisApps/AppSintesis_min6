@@ -210,7 +210,7 @@
 }
 /*Panel De Iconos*/
 
- @media screen and (min-width: 321px) and (max-width: 640px) {
+@media screen and (min-height: 481px) and (max-height: 1000px) {
 
 .content{
 	/*right: 0;*/
@@ -252,7 +252,8 @@
 	transition: opacity 1s ease-in-out;
 	-moz-transition: opacity 1s ease-in-out;
 	-webkit-transition: opacity 1s ease-in-out;
-	z-index: -1;	
+	z-index: -1;
+
 
 }
 .TransicionFadeOut:target{
@@ -265,9 +266,10 @@
 
 /*Panel De Secciones*/
 .panelSeccion{
-	min-width: 20%;
-	height: 600px;
-	overflow-y: auto;
+	min-width: 30%;
+	height:465px;
+/*	height: 375px;
+*/	overflow-y: auto;
 	overflow-x: hidden;
 	left: -250%;
 	top:0;
@@ -297,6 +299,20 @@
 	padding-top:10px;
 	margin-left:5px;
 	text-align:left;
+	
+	}
+	
+	.panelSeccionTitulo2{
+	width:100%;
+	background-position:center center;
+	background-repeat:no-repeat; 
+	background-size:20px;
+	height:20px;
+	color:#666;
+	padding-top:10px;
+	text-align:center;
+	padding:5px;
+	padding-right:5px;
 	
 	}
 .panelSeccionSpacer{
@@ -344,8 +360,9 @@
 /*Panel De Iconos*/
 .panelIcono{
 	min-width: 100px;
-	height: 270px;
-	overflow-y: auto;
+	height:270px;
+/*	height: 270px;
+*/	overflow-y: auto;
 	overflow-x: auto;
 	left: -250%;
 	top:0;
@@ -354,12 +371,14 @@
 	background-color:transparent;
 	box-shadow: 0px 4px 7px rgba(0,0,0,0.6);
 	z-index: 2;
-	margin:270px;
+	margin:112px;
 	text-align:center;
 	font-size:15px;
 	padding-top:20px;
-	margin-top:590px;
-	transition:height 2s;
+/*	padding-top:20px;
+	margin-top:150px;
+*/	transition:height 2s;
+	margin-top:240px;
 	-moz-transition:height 2s;
 	-webkit-transition:height 2s;
 	-o-transition:height 2s;
@@ -379,9 +398,6 @@
 	border-bottom-color:#FF3300;
 	
 	}
-	
-	
-	
 
 .closeIcono{
     background-color: rgb(102,102,102);
@@ -409,5 +425,4 @@
     text-shadow: 0 -1px rgba(0, 0, 0, 0.9);
 }
 /*Panel De Iconos*/
-
  }

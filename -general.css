@@ -794,11 +794,11 @@ height:200px;
  }
  
  
-@media screen and (min-height: 481px) and (max-height: 1000px) {
-	
+ @media screen and (min-width: 321px) and (max-width: 640px) {
 	
 	#home{
-		height:570px;
+		height:640px;
+		height:960px;
 	}
 	/*Slide miniaturas*/
 
@@ -815,47 +815,49 @@ height:200px;
 	  }
 	/*Minuto a minuto*/
 	
+	.logo1
+	{
+		display:inline-block; 
+		width:75%; 
+		vertical-align: top; 
+		padding-top:10px; 
+		text-align:center;
+	}
+	
+	
 	.HeaderAlternativo{
 	background-image:url(imagenes/barra.png);
 	height:44px;
 	font-family:  Helvetica, sans-serif;
 	font-size: 16px;
 	color: #0c6090;
-	width:320px;
+	width:640px;
 	z-index:2;
 	vertical-align:top;
-	}
-	
-	.logo1
-	{
-		display:inline-block; 
-		width:65%; 
-		vertical-align: top; 
-		padding-top:10px; 
-		text-align:center;
 	}
 	
 	.HeaderAlternativoFooter{
 	background-image:url(imagenes/barra@2x.png);
 	background-repeat:no-repeat;
-	background-size:320px;
+	background-size:640px 51px;
 	font-family:  Helvetica, sans-serif;
 	font-size: 16px;
 	color: #0c6090;
-	width:320px;
+	width:640px;
 	height:51px;
 	z-index:2;
 		}
 	
 	/*Slide Principal*/
 .ContenedorSlidePrincipal {
-	 width: 320px;
-	 margin:auto;
-    overflow: auto;
+	 width: 640px;
+	 height:345px;
+/*	 margin:245px;
+*/    overflow: auto;
 	-webkit-overflow-scrolling: touch;
 	margin:auto;
-	background: rgba(204,204,204,.4);
-	height: 196px;
+/*	background: rgba(204,204,204,.4);
+*/
 }
 
 .ContenedorContenidoPrincipal {
@@ -865,10 +867,9 @@ height:200px;
 
 .SlidePrincipalImagen {
 	display:inline-block;
-	width:309px;
-/*	width:296px;
-*/	height:184px;
-	vertical-align:top;
+	width:616px;
+	height:345px;
+vertical-align:top;
 	overflow:hidden;
 	
 
@@ -876,26 +877,30 @@ height:200px;
 }
 .PublicidadSlidePrincipal {
 	display:inline-block;
-	width:320px;
+	width:616px;
 	height:auto;
 /*	height:242px;
 */	vertical-align:top;
 	overflow:hidden;
 }
 .SlidePrincipalImagen img {
-	width:100%;
+	width:616px;
+	height:auto;
 	margin-left:10px;
 	z-index:1;
 	vertical-align:top;
-	/*background-image:url(index_vid_secc_impr_icon_galeria.html)*/
+		background-color:#000000;
+		
+
 }
 .SlidePrincipalContenido {
 	margin-top:-75px;
 	position:relative;
 /*	display:inline-block;
-*/	width:301px;
-	height:75px;
-	vertical-align:top;
+*/	width:610px;
+	height:auto;
+/*	height:70px;
+*/	vertical-align:top;
 /*	font-size: 30px;
 */	font-size: 15px;
 	color: #666;
@@ -943,11 +948,11 @@ height:200px;
 
 /*Slide Vertical*/
 .DivVertical{
-	width:296px;
+	width:640px;
 	height:auto;
 	}
 .ContenedorSlideVertical {
-	width: 296px;
+	width: 616px;
 	background: rgba(204,204,204,.4);
     position: relative;
 	/*margin: 7px;*/
@@ -957,70 +962,65 @@ height:200px;
 	overflow: auto;
 /*	-webkit-overflow-scrolling: touch;
 */	margin-bottom:50px;
-	height:290px;
-/*height:200px;
-*/
-
-
-
-/*		height:220px;
-*/	
+	height:600px;
+	
 	
 }
 
 #vertical_seccion{
-	height:100px;
+	height:200px;
 }
+
 .SlideVerticalSeccion {
 	position:absolute;
 	margin:0;
 }
 
 .SlideVerticalArticulo {
-	height:106px;
+	height:198px;
 	background: rgba(204,204,204,.9);
-	margin-top:7px;
-
+	margin-top:10px;
 
 }
 
 .PublicidadSlideVertical {
 	background: rgba(204,204,204,.9);
-	width:100%;
-	margin-top:7px;
-	height:135.7px;
+	width:616px;
+	margin-top:10px;
+	height:198px;
+	
 	
 }
 .PublicidadSlideVertical img{
 	background: rgba(204,204,204,.9);
-	width:296px;
-/*   width:260px;
-*/   height:112px;
+   width:616px;
+   height:178px;
 /*	height:125.7px;
-*/	/*margin-left:12px;
+*/	margin-left:12px;
 	margin-bottom:10px;
-	margin-top:10px;	*/
+	margin-top:10px;
+
 }
 
 .SlideVerticalImagen {
-	width: 125.7px;
+	width: 50%;
 	display: inline-block;
 	text-align:center;
-	margin-left:12px;
 	margin-top:10px;
-	
+	margin-left:-10px;
+
 	
 }
 .SlideVerticalImagen img {
 	display:inline-block;
-	width: 125.7px;
+	margin-left:0px;
+	width: 90%;
 	height:auto;
 /*	height:125.7px;
-	background:#3FF;*/
+*/	background:#3FF;
 /*	box-shadow: 5px 5px 5px #000;
 */}
 .SlideVerticalContenido {
-	display:inline-block;
 	display: inline-block;
 	width: 48%;
 	text-shadow:none;
@@ -1029,12 +1029,13 @@ height:200px;
 	margin-top:10px;
 	height:146px;
 	color:#000;
+
 }
 .SlideVerticalTitulo {
 	font-family:  Helvetica, sans-serif;
 	text-align: left;
 	vertical-align: top;
-	font-size: 15px;
+	font-size: 30px;
 	width:98%;
 	text-shadow: 0.3em 0.2em #B2B2B2 ;
 	font-weight: bold;
@@ -1044,18 +1045,23 @@ height:200px;
 
 .SlideVerticalAutor {
 	font-family:  Helvetica, sans-serif;
-	font-size: 10px;
+	font-size: 18px;
 	color: #0c6090;
 	text-align:left;
-	padding-top:10px;
+	padding-top:18px;
 }
 .SlideVerticalFecha {
 	font-family:  Helvetica, sans-serif;
-	font-size: 10px;
+	font-size: 18px;
 	color: #0c6090;
 	text-align:left;
 }
 /*Slide Vertical*/
+
+
+/*Copi*/
+
+
 
 /*Slide Principal Plaza*/
 .SeccionSeccion{
@@ -1067,20 +1073,21 @@ height:200px;
 	}
 .ContenedorPrincipalSeccion{
 	vertical-align:top;
-	height:212px;
+	height:297px;
 /*	height:212px;
-*/	width: 296px;
-	margin-left:10px;
+*/	width: 100%;
 	overflow: auto;
 	-webkit-overflow-scrolling: touch;
 	padding-top:20px;
 	padding-bottom:7px;
+	margin-left:10px;
+	width:616px;
 /*	 padding:15px;
 */	 
 	 }
 .SubContenedorPrincipalSeccion{
 	vertical-align:top;  
-	height:212px;  
+	height:297px;  
 	margin:auto;
 	overflow: auto;
 	}
@@ -1088,9 +1095,9 @@ height:200px;
 	display:inline-block; 
 	overflow:hidden;
 	background: rgba(204,204,204,.4); 
-	height:214px; 
+	height:441px; 
 	padding:0px;
-	width:143px; 
+	width:297px; 
 	margin:auto;
 	margin-left:5px;
 	box-shadow: 5px 5px 5px  #666;
@@ -1098,11 +1105,11 @@ height:200px;
 	}
 .ImagenPrincipalSeccion{
 	display:inline-block;
-	width:126px;
+	width:246px;
 	vertical-align:top;
 	overflow:hidden; 
 	margin:auto;
-	margin-left:8px;
+	margin-left:17px;
 	height:auto;
 	}
 .PublicidadPrincipalSeccion{
@@ -1137,7 +1144,7 @@ height:200px;
 	}
 .SeccionPrincipalSeccion{
 	font-family:Helvetica, sans-serif;
-	font-size: 11px;
+	font-size: 12px;
 	color: #0c6090;
 	text-shadow:none;
 	padding-top:10px;
@@ -1145,14 +1152,14 @@ height:200px;
 	}
 .AutorPrincipalSeccion{
 	font-family:Helvetica, sans-serif;
-	font-size:11px;
+	font-size:12px;
 	color:#0c6090;
 	text-shadow:none;
 	margin-left:8px;
 	}
 .FechaPrincipalSeccion{
 	font-family:Helvetica, sans-serif;
-	font-size: 11px;
+	font-size: 12px;
 	color: #0c6090;
 	text-shadow:none;
 	margin-left:8px;
@@ -1170,69 +1177,65 @@ height:200px;
 	background: rgba(204,204,204,.4);
 	text-shadow:none;
 	width:100%;
-/*	width:100%;
-*/	margin:auto;
+	margin:auto;
 	margin-left:0px;
-	height:auto;
 }
 
 
 .NotaContenedor img {
-	width:298px;
+	width:620px;
 	margin:auto;
 	float:left;
-/*	width:50%;
-*/	padding:12px;
-
+	width:100%;
+	padding:12px;
 	
 }
 .NotaTitulo{
 	font-family:  Helvetica, sans-serif;
 	font-size: 24px;
-	color: #4D4D4D;
+	color:#4D4D4D;
 	font-weight:bold;
 	padding-top:10px;
 	margin-left:10px;
-	margin-right:10px;
+	margin-right:12px;
 }
 
 .NotaSumario{
 	padding-top: 20px;
 	font-family:  Helvetica, sans-serif;
-	font-size: 18px;
+	font-size: 20px;
 	font-weight: bold;
 	color:#666666;
 	margin-left:10px;
-	margin-right:10px;
+	margin-right:12px;
+
 }
 .NotaAutor{
 	text-align:left;
-	font-size: 12px;
+	font-size: 20px;
 	color: #0c6090;
 	padding-top:30px;
 	font-weight: bold;
 	margin-left:10px;
-		margin-top:10px;
-
+	padding-top:10px;
 }
 .NotaFechaCreacion{
 	text-align:left;
-	font-size: 12px;
+	font-size: 20px;
 	color: #0c6090;
 	font-weight: bold;
 	margin-left:10px;
-		margin-top:10px;
-
+	padding-top:10px;
 }
 
 .NotaCompleta{
-	padding-top:0px;
 	width:94%;
 	text-align:justify;
 	padding-bottom:10px;
 	margin-left:10px;
-	margin-top:10px;
-	margin-right:10px;
+	color:#808080;
+	padding-top:10px;
+	margin-right:12px;
 	color:#808080;
 }
 
@@ -1244,16 +1247,15 @@ height:200px;
 	 width:300px;
 	 height:auto;
 	 float:left;
-	 margin-left:0px;
+	 margin-left:10px;
 }
 .ImagenesNotaImagen{
 	display:inline-block;
 	}
 .ImagenesNotaImagen img {
-	width:298px;
+	width:620px;
 	vertical-align:top;
 	overflow:hidden;
-	
 }
 .ZoomImagenNota{
 	position:absolute;
@@ -1387,7 +1389,7 @@ height:200px;
 	overflow:auto; 
 	height:100%;
 	}
-.PortadillasImagen{ 
+.PortadillasImagen{
 	height:200px;
 	}
 .PortadillasDia{
@@ -1420,6 +1422,7 @@ height:200px;
 .galleriaNota li { float: left; width: 100%; }
 .galleriaNota li a { display: block; margin: 5px; border: 1px solid #3c3c3c; }
 .galleriaNota li img { display: block; width: 100%; height: auto; }
+
  }
  
 
