@@ -807,6 +807,18 @@ height:200px;
 	}
 	/*Slide miniaturas*/
 	
+	/*Ubicacion*/
+
+	.contNav {
+		width:100%; 
+		height:100%; 
+		background:url(imagenes/mapa.jpg) no-repeat; 
+		background-size:100% 100%; 
+		background-position:center center; 
+		margin-top:-10px;
+	}
+	/*Ubicacion*/
+	
 	
 	 /*Minuto a minuto*/
 	.ContenedorDivMedio {
