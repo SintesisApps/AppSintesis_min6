@@ -159,18 +159,22 @@
 			
 			function galeria_video(plaza)
 			{
+				document.addEventListener("deviceready", function(){
 
-				$.ajax({
-					type: "POST",
-				url: "http://166.78.193.53/RecursosApp/minios/php/galeria_video.php",
-				//data: "",
-				data: "plaza="+plaza,
-				cache: false,
-				success: function(message)
-				{	
-				$('.contvideogaleria').html(message);
-				}
-				});
+					$.ajax({
+						type: "POST",
+					url: "http://166.78.193.53/RecursosApp/minios/php/galeria_video.php",
+					//data: "",
+					data: "plaza="+plaza,
+					cache: false,
+					success: function(message)
+					{	
+					$('.contvideogaleria').html(message);
+					}
+					});
+				setInterval(function(){document.getElementById("cargando").style.display='none'},14000);
+				
+					});
 			}
 
 			
